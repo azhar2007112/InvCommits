@@ -33,7 +33,7 @@ use App\Http\Controllers\SslCommerzPaymentController;
 |
 */
 //route login
-Route::get('/login', [AuthController::class, 'index'])->name('login');
+Route::get('/login', [AuthController::class, 'index'])->name('login');///same link a
 //->middleware('guest');
 Route::post('/login', [AuthController::class, 'authenticate']);
 Route::get('/register', [AuthController::class, 'register']);
@@ -168,7 +168,7 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
     Route::post('/admin/get_sub_category', [SubCategoryController::class, 'get_sub_category']);
 
 
-
+   
 
     Route::get('/admin/product/list', [ProductController::class, 'list']);
     Route::get('/admin/product/add', [ProductController::class, 'add']);
